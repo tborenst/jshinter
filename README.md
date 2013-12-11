@@ -7,6 +7,9 @@ To download and use, simply `npm install jshinter`.
 * MIT license.
 * Copyright Carnegie Mellon University 2013.
 
+## Difference to JSHint
+JSHinter is simply a wrapper around JSHint which lets you call it programmatically from Node, instead of using it strictly as a command line tool.
+
 ## Functionality
 Currently the linter is configued to use the default JSHint options. A way to alter the configuration of the linter is coming soon.
 
