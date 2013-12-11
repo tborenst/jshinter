@@ -1,0 +1,32 @@
+{
+  "name": "jshinter",
+  "version": "0.0.1",
+  "description": "JS linter, a wrapper around JSHint that lets you call it from Node.",
+  "main": "jshinter.js",
+  "repository"    : {"type": "git", "url": "git@github.com:tborenst/csslint.git"},
+  "keywords": [
+    "js",
+    "javascript",
+    "lint",
+    "linter",
+    "jslint",
+    "jshinter",
+    "csslinter"
+  ],
+  "author": {
+    "name": "Tomer Borenstein",
+    "email": "tomer.boren@gmail.com"
+  },
+  "files": [
+    "csslint.js",
+    "dictionary.js",
+    "linebyline.js",
+    "utils.js"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "css-parse": "~1.6.0"
+  },
+  "devDependencies": {},
+  "engine": {"node": "v0.10.20"}
+}
