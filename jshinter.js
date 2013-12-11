@@ -52,7 +52,7 @@ var lintJsText = function(text, callback){
 		if(dirExists) {
 			writeFile();
 		} else {
-			fs.mkdir("./workspace", function(error){
+			fs.mkdir(__dirname + "/workspace", function(error){
 				if(error){
 					callback(error, null);
 				} else {
