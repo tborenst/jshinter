@@ -8,7 +8,8 @@ var fs = require("fs");
 // {errors: [{file: file, line: line, msg: msg}, ...]}
 //====
 var lintJsFile = function(path, callback){
-	var child = cp.exec("jshint --reporter ./reporter.js " + path, function(error, stdout, stderr){
+	var child = cp.exec("jshint --reporter " + __dirname + "/reporter.js " + path, 
+						function(error, stdout, stderr){
 		if(stdout !== ""){
 			callback(null, JSON.parse(stdout));
 		} else if(error){
