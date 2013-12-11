@@ -1,6 +1,7 @@
 js-hinter
 ======
 This is a JS linter (which uses [JSHint](http://www.jshint.com/)) created for the Carnegie Mellon University course *'15-237: Developing Cross Platform Web Applications'*.
+To download an use, simply `npm install jshinter`.
 
 * MIT license.
 * Copyright Carnegie Mellon University 2013.
