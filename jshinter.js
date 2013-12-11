@@ -29,7 +29,7 @@ var lintJsText = function(text, callback){
 		// function to make temp file and lint it
 		var i = 0;
 		var writeFile = function(){
-			var path = "./workspace/temp" + i + ".js";
+			var path = __dirname + "/workspace/temp" + i + ".js";
 			i += 1;
 			fs.exists(path, function(fileExists){
 				if(fileExists){ 
