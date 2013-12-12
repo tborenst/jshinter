@@ -1,6 +1,6 @@
 {
   "name": "jshinter",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "wrapper around JSHint that lets you call it from Node.",
   "main": "jshinter.js",
   "repository"    : {"type": "git", "url": "git@github.com:tborenst/jshinter.git"},
@@ -27,7 +27,7 @@
     "jshint": "~2.3.0"
   },
   "scripts": {
-    "preinstall": "npm i -g jshint --unsafe-perm"
+    "preinstall": "npm i -g jshint"
   },
   "devDependencies": {},
   "engine": {"node": "v0.10.20"}
