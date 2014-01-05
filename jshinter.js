@@ -1,5 +1,6 @@
 var cp = require("child_process");
 var fs = require("fs");
+var pathModule = require("path");
 
 //====
 // Executes the "jshint" command and receives error data from the JSHint
@@ -22,14 +23,14 @@ var lintJsFile = function(path, callback){
 
 //====
 // Creates a working directory if one doesn't exists, and then creates a temp
-// file to write the text into, and then call lintJsFile() on the temp file.
+// file to write the text in tto, and then call lintJsFile() on the temp file.
 //====
 var lintJsText = function(text, callback){
-	fs.exists("./workspace", function(dirExists){
+	fs.exists(pathModule.join(__dirname ,"workspace"), function(dirExists){
 		// function to make temp file and lint it
 		var i = 0;
 		var writeFile = function(){
-			var path = __dirname + "/workspace/temp" + i + ".js";
+			var path = pathModule.join(__dirname, "workspace", "temp" + i + ".js");
 			i += 1;
 			fs.exists(path, function(fileExists){
 				if(fileExists){ 
