@@ -9,7 +9,7 @@ var pathModule = require("path");
 // {errors: [{file: file, line: line, msg: msg}, ...]}
 //====
 var lintJsFile = function(path, callback){
-	var child = cp.exec("jshint --reporter " + __dirname + "/reporter.js " + path, 
+	var child = cp.exec("jshint --reporter " + pathModule.join(__dirname, "reporter.js") + " " + path, 
 						function(error, stdout, stderr){
 		if(stdout !== ""){
 			callback(null, JSON.parse(stdout));
@@ -23,7 +23,7 @@ var lintJsFile = function(path, callback){
 
 //====
 // Creates a working directory if one doesn't exists, and then creates a temp
-// file to write the text in tto, and then call lintJsFile() on the temp file.
+// file to write the text in to, and then call lintJsFile() on the temp file.
 //====
 var lintJsText = function(text, callback){
 	fs.exists(pathModule.join(__dirname ,"workspace"), function(dirExists){
@@ -53,7 +53,7 @@ var lintJsText = function(text, callback){
 		if(dirExists) {
 			writeFile();
 		} else {
-			fs.mkdir(__dirname + "/workspace", function(error){
+			fs.mkdir(pathModule.join(__dirname, "workspace"), function(error){
 				if(error){
 					callback(error, null);
 				} else {
